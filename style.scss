@@ -11,6 +11,77 @@ body {
   font-weight: 300;
 }
 
+h1 {
+  color: $darkTileText;
+  font-size: 1.2rem;
+  font-weight: 100;
+  padding: 3rem 1rem 4rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  @media (min-width: 992px) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+h2 {
+  color: $headerText;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  line-height: 2.5rem;
+}
+
+section {
+  @media (min-width: 992px) {
+    display: flex;
+  }
+
+  article {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    @media (min-width: 992px) {
+      width: 33%;
+    }
+
+    .tile {
+      background: $darkTileBackground;
+      color: $darkTileText;
+      padding: 1.5rem;
+      margin-bottom: 0.5rem;
+      @media (min-width: 992px) {
+        height: 100%;
+      }
+
+      p {
+        line-height: 2rem;
+      }
+
+      .video {
+        text-align: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        svg {
+          max-width: 8rem;
+        }
+      }
+    }
+
+    .tile-light {
+      background: $lightTileBackground;
+      color: $lightTileText;
+    }
+
+    .tile-video {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
 #container {
   position: relative;
 }
@@ -30,6 +101,11 @@ body {
     height: 4rem;
     width: 4rem;
     background: $darkTileBackground;
+
+    @media (min-width: 992px) {
+      height: 6rem;
+      width: 6rem;
+    }
 
     &:focus {
       box-shadow: none;
@@ -60,4 +136,5 @@ a {
   letter-spacing: 0.2rem;
   font-size: 1rem;
   color: $headerText;
+  font-weight: 500;
 }
